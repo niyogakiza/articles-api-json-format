@@ -17,30 +17,30 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('articles', \App\Http\Controllers\ArticleController::class);
-Route::apiResource('authors', \App\Http\Controllers\AuthorController::class);
-Route::apiResource('comments', \App\Http\Controllers\CommentController::class);
+Route::apiResource('articles', 'ArticleController');
+Route::apiResource('authors', 'AuthorController');
+Route::apiResource('comments', 'CommentController');
 
 
-Route::get('articles/{articles}/relationships/author',
+Route::get('articles/{article}/relationships/author',
     [
         'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@author',
         'as'   => 'articles.relationships.author',
     ]);
 
-Route::get('articles/{articles}/author',
+Route::get('articles/{article}/author',
     [
         'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@author',
         'as'   => 'articles.author',
     ]);
 
-Route::get('articles/{articles}/relationships/comments',
+Route::get('articles/{article}/relationships/comments',
     [
         'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@comments',
         'as'   => 'articles.relationships.comments',
     ]);
 
-Route::get('articles/{articles}/comments',
+Route::get('articles/{article}/comments',
     [
         'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@comments',
         'as'   => 'articles.comments',

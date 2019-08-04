@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f2cdfe8e-110f-43e8-9e4d-8dfa31677b06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ArticleCommentsRelationshipResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ArticleCommentsRelationshipResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ArticleRelationshipResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ArticleRelationshipResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ArticleResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ArticleResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ArticlesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ArticlesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/AuthorIdentifierResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AuthorIdentifierResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CommentIdentifierResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CommentIdentifierResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CommentRelationshipResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CommentRelationshipResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/People.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564932364995</updated>
       <workItem from="1564932367620" duration="2457000" />
-      <workItem from="1564934952082" duration="9651000" />
+      <workItem from="1564934952082" duration="12386000" />
     </task>
     <servers />
   </component>
