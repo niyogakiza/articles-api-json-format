@@ -3,24 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Http\Resources\ArticleResource;
+use App\Http\Resources\ArticlesResource;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return ArticlesResource
      */
     public function index()
     {
-        //
+        return new ArticlesResource(Article::with(['author', 'comments.author'])->paginate());
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -31,7 +34,7 @@ class ArticleController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -42,18 +45,19 @@ class ArticleController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
+     * @return ArticleResource
      */
     public function show(Article $article)
     {
-        //
+        ArticleResource::withoutWrapping();
+        return new ArticleResource($article);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(Article $article)
     {
@@ -65,7 +69,7 @@ class ArticleController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Article $article)
     {
@@ -76,7 +80,7 @@ class ArticleController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Article $article)
     {
