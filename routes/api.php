@@ -17,4 +17,31 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('articles', 'ArticleController');
+Route::apiResource('articles', \App\Http\Controllers\ArticleController::class);
+Route::apiResource('authors', \App\Http\Controllers\AuthorController::class);
+Route::apiResource('comments', \App\Http\Controllers\CommentController::class);
+
+
+Route::get('articles/{articles}/relationships/author',
+    [
+        'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@author',
+        'as'   => 'articles.relationships.author',
+    ]);
+
+Route::get('articles/{articles}/author',
+    [
+        'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@author',
+        'as'   => 'articles.author',
+    ]);
+
+Route::get('articles/{articles}/relationships/comments',
+    [
+        'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@comments',
+        'as'   => 'articles.relationships.comments',
+    ]);
+
+Route::get('articles/{articles}/comments',
+    [
+        'uses' => \App\Http\Controllers\ArticleRelationshipController::class . '@comments',
+        'as'   => 'articles.comments',
+    ]);
